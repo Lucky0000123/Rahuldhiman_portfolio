@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "masterPortfolio",
+  "name": "rahuldhiman-portfolio",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://github.com/Lucky0000123/rahul-portfolio.git",
   "scripts": {
     "build": "react-scripts --openssl-legacy-provider build",
     "predeploy": "npm run build",

@@ -4,6 +4,7 @@ import Main from "./containers/Main";
 import { ThemeProvider } from "styled-components";
 import { chosenTheme } from "./theme";
 import { GlobalStyles } from "./global";
+import { BrowserRouter as Router } from "react-router-dom"; // Import BrowserRouter
 
 function App() {
   return (
@@ -11,7 +12,11 @@ function App() {
       <>
         <GlobalStyles />
         <div>
-          <Main theme={chosenTheme} />
+          <Router basename="/rahuldhiman-portfolio">
+            {" "}
+            {/* Add basename */}
+            <Main theme={chosenTheme} />
+          </Router>
         </div>
       </>
     </ThemeProvider>
