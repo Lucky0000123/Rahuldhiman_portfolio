@@ -1,6 +1,20 @@
 .skills-main-div {
   display: flex;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 40px;
+  margin: 40px 0;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-main-div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
 }
 
 .skills-header {
@@ -35,6 +49,32 @@
   font-weight: 400;
   font-family: "Google Sans Regular";
   line-height: normal;
+}
+
+.skills-progress-section {
+  margin: 60px 0;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.skills-progress-heading {
+  font-size: 48px;
+  font-weight: 600;
+  font-family: "Google Sans Bold";
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skills-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Media Query */
@@ -81,5 +121,16 @@
   }
   .skills-image-div > * {
     margin-top: 0px;
+  }
+  .skills-progress-section {
+    padding: 20px;
+    margin: 30px 0;
+  }
+  .skills-progress-heading {
+    font-size: 28px;
+  }
+  .skills-progress-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }

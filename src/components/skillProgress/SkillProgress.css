@@ -1,0 +1,86 @@
+.skill-progress-container {
+  margin: 25px 0;
+}
+
+.skill-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-family: "Google Sans Medium";
+  font-weight: 600;
+}
+
+.skill-percentage {
+  font-size: 16px;
+  font-family: "Google Sans Bold";
+  font-weight: 700;
+}
+
+.skill-progress-bar-container {
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fillBar 1.5s ease-in-out;
+  overflow: hidden;
+}
+
+.skill-progress-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes fillBar {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-name {
+    font-size: 16px;
+  }
+
+  .skill-percentage {
+    font-size: 14px;
+  }
+
+  .skill-progress-bar-container {
+    height: 10px;
+  }
+}

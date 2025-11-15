@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
+import SkillProgress from "../../components/skillProgress/SkillProgress";
 import { skills } from "../../portfolio";
 import { Fade } from "react-reveal";
 import DataScienceImg from "./DataScienceImg";
@@ -18,11 +19,41 @@ function GetSkillSvg(props) {
   return <DesignImg theme={props.theme} />;
 }
 
+// Key Technical Skills with Proficiency Levels
+const technicalSkills = [
+  { name: "JavaScript / TypeScript", value: 90 },
+  { name: "React / Next.js", value: 88 },
+  { name: "Node.js / Express", value: 85 },
+  { name: "Python", value: 82 },
+  { name: "MongoDB / PostgreSQL", value: 80 },
+  { name: "AWS / Cloud Services", value: 75 },
+  { name: "Docker / Kubernetes", value: 72 },
+  { name: "Git / CI/CD", value: 88 },
+];
+
 class SkillSection extends Component {
   render() {
     const theme = this.props.theme;
     return (
       <div>
+        {/* Technical Skills Progress Bars */}
+        <div className="skills-progress-section">
+          <Fade bottom duration={1000} distance="20px">
+            <h2
+              className="skills-progress-heading"
+              style={{ color: theme.text }}
+            >
+              Technical Proficiency
+            </h2>
+          </Fade>
+          <div className="skills-progress-grid">
+            {technicalSkills.map((skill, i) => (
+              <SkillProgress key={i} skill={skill} theme={theme} />
+            ))}
+          </div>
+        </div>
+
+        {/* Existing Skills Sections */}
         {skills.data.map((skill, i) => {
           return (
             <div key={i} className="skills-main-div">

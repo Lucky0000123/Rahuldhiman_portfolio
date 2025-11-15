@@ -5,6 +5,8 @@ import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
 import FeelingProud from "./FeelingProud";
+import TypingEffect from "../../components/typingEffect/TypingEffect";
+import "../../components/typingEffect/TypingEffect.css";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -22,33 +24,76 @@ export default function Greeting(props) {
                   ( {greeting.nickname} )
                 </h2>
               )}
+              <div className="greeting-role-container">
+                <h2
+                  className="greeting-role"
+                  style={{ color: theme.imageHighlight }}
+                >
+                  <TypingEffect
+                    strings={[
+                      "Full Stack Developer 💻",
+                      "Problem Solver 🚀",
+                      "UI/UX Enthusiast 🎨",
+                      "Open Source Contributor 🌟",
+                      "Tech Explorer 🔍",
+                    ]}
+                    typeSpeed={100}
+                    backSpeed={50}
+                  />
+                </h2>
+              </div>
               <p
                 className="greeting-text-p subTitle"
                 style={{ color: theme.secondaryText }}
               >
                 {greeting.subTitle}
               </p>
+
+              {/* Statistics Section */}
+              <div className="greeting-stats">
+                <div
+                  className="stat-item"
+                  style={{ borderColor: theme.highlight }}
+                >
+                  <h3 style={{ color: theme.text }}>3+</h3>
+                  <p style={{ color: theme.secondaryText }}>Years Experience</p>
+                </div>
+                <div
+                  className="stat-item"
+                  style={{ borderColor: theme.highlight }}
+                >
+                  <h3 style={{ color: theme.text }}>50+</h3>
+                  <p style={{ color: theme.secondaryText }}>Projects Done</p>
+                </div>
+                <div
+                  className="stat-item"
+                  style={{ borderColor: theme.highlight }}
+                >
+                  <h3 style={{ color: theme.text }}>100+</h3>
+                  <p style={{ color: theme.secondaryText }}>GitHub Repos</p>
+                </div>
+              </div>
+
               <SocialMedia theme={theme} />
-              <div className="portfolio-repo-btn-div">
+
+              <div className="button-greeting-div">
                 <Button
-                  text="⭐ Star Me On Github"
+                  text="📥 Download Resume"
                   newTab={true}
-                  href={greeting.portfolio_repository}
+                  href={greeting.resumeLink}
                   theme={theme}
-                  className="portfolio-repo-btn"
+                  className="main-button"
+                />
+                <Button
+                  text="📧 Contact Me"
+                  href="/contact"
+                  theme={theme}
+                  className="main-button"
                 />
               </div>
-              {/* <div className="button-greeting-div">
-              <Button text="Contact me" href="#contact" />
-              <Button text="See my resume" newTab={true} href={greeting.resumeLink} />
-            </div> */}
             </div>
           </div>
           <div className="greeting-image-div">
-            {/* <img
-							alt="saad sitting on table"
-							src={require("../../assets/images/feelingProud.svg")}
-						></img> */}
             <FeelingProud theme={theme} />
           </div>
         </div>

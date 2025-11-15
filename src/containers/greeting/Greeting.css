@@ -43,6 +43,54 @@
   font-family: "Google Sans Bold Italic";
 }
 
+.greeting-role-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 50px;
+}
+
+.greeting-role {
+  font-size: 35px;
+  line-height: 1.4;
+  font-family: "Google Sans Medium";
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.greeting-stats {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  padding: 15px 25px;
+  border-left: 4px solid;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+  font-size: 32px;
+  margin: 0;
+  font-family: "Google Sans Bold";
+  font-weight: 700;
+}
+
+.stat-item p {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  font-family: "Google Sans Regular";
+}
+
 .greeting-text-p {
   font-size: 40px;
   line-height: 40px;
@@ -63,10 +111,19 @@
   .greeting-text-p {
     font-size: 20px;
   }
+  .greeting-role {
+    font-size: 28px;
+  }
+  .stat-item h3 {
+    font-size: 26px;
+  }
 }
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
   .greeting-text {
     font-size: 30px;
@@ -76,6 +133,27 @@
   .greeting-nickname {
     font-size: 25px;
     text-align: center;
+  }
+  .greeting-role {
+    font-size: 20px;
+    text-align: center;
+  }
+  .greeting-role-container {
+    text-align: center;
+    min-height: 40px;
+  }
+  .greeting-stats {
+    justify-content: center;
+    gap: 15px;
+  }
+  .stat-item {
+    padding: 12px 20px;
+  }
+  .stat-item h3 {
+    font-size: 24px;
+  }
+  .stat-item p {
+    font-size: 12px;
   }
   .greeting-text-p {
     font-size: 16px;

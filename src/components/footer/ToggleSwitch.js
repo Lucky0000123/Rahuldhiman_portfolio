@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import "./ToggleSwitch.scss";
-import { lightTheme } from "../../theme";
+import "./ToggleSwitch.css";
+import { materialLightTheme } from "../../theme";
 import styled from "styled-components";
 
 export const ToggleDiv = styled.div`
-  margin-top: 40px;
-  margin-right: 5px;
-  float: right;
+  margin-top: 0px;
+  margin-right: 0px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 `;
 
 export const SunSvg = styled.svg`
@@ -22,7 +22,7 @@ export const MoonSvg = styled.svg`
 export default class ToggleSwitch extends Component {
   render() {
     const theme = this.props.theme;
-    const isOn = this.props.theme === lightTheme ? false : true;
+    const isOn = this.props.theme === materialLightTheme ? false : true;
     const back = theme.text;
     const butt = theme.body;
     return (

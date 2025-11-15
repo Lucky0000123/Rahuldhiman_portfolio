@@ -12,16 +12,37 @@
   margin-right: 20px;
   margin-bottom: 20px;
   font-family: "Google Sans Regular";
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.software-skill-inline:hover {
+  transform: scale(1.2) translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .software-skill-inline > i {
   color: #868e96;
+  transition: color 0.3s ease;
 }
 
 .software-skill-inline > i:hover {
   color: #645beb;
 }
 
+.software-skill-inline .iconify {
+  transition: all 0.3s ease;
+}
+
 .skill-image {
   height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.software-skill-inline:hover .skill-image {
+  transform: scale(1.1);
 }
